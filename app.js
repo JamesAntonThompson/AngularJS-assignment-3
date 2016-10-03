@@ -28,7 +28,6 @@ function NarrowItDownController(MenuSearchService, $timeout) {
 	var list = this;
 
 	list.showItems = function () {
-		list.searchTerm = list.searchTerm.trim()
 		if ( list.searchTerm == '' ) {
 			// The search term text box is empty
 			console.log('blank search term');
