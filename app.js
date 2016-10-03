@@ -2,18 +2,18 @@
 'use strict';
 
 angular.module('NarrowItDownApp', [])
-.controller('MenuItemsSearchController', MenuItemsSearchController)
+.controller('NarrowItDownController', NarrowItDownController)
 .service('MenuSearchService', MenuSearchService)
 .constant('ApiBasePath', "http://davids-restaurant.herokuapp.com");
 
-MenuItemsSearchController.$inject = ['MenuSearchService', '$timeout'];
-function MenuItemsSearchController(MenuSearchService, $timeout) {
+NarrowItDownController.$inject = ['MenuSearchService', '$timeout'];
+function NarrowItDownController(MenuSearchService, $timeout) {
 	var list = this;
-	//console.log('MenuItemsSearchController()');
+	//console.log('NarrowItDownController()');
 	
 
 	list.showItems = function () {
-		//console.log('MenuItemsSearchController.showItems()');
+		//console.log('NarrowItDownController.showItems()');
 		var promise = MenuSearchService.getMatchedMenuItems( list.searchTerm );
 		promise.then( 	function (response) {
 							console.log('all good');
